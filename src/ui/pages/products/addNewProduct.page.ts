@@ -1,5 +1,5 @@
 import { IProduct } from "../../../data/types/products.types.ts";
-import { SalesPortalPage } from "../salesPortal.page";
+import { SalesPortalPage } from "../salesPortal.page.ts";
 
 class AddNewProductPage extends SalesPortalPage {
   readonly Title = '//h2[.="Add New Product "]';
