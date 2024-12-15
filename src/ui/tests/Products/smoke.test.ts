@@ -3,18 +3,17 @@ import { generateProductData } from "../../../data/products/generateProducts.ts"
 import homePage from "../../pages/home.page";
 import addNewProductPage from "../../pages/Products/addNewProduct.page";
 import productsPage from "../../pages/Products/products.page";
+import { signInPage } from "../../pages/signIn.page.ts";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 describe("[UI] [Products] Smoke", () => {
   beforeEach(async function () {
+    await browser.maximizeWindow();
     await browser.url("https://anatoly-karpovich.github.io/aqa-course-project/");
-    const emailSelector = "#emailinput";
-    const passwordSelector = "#passwordinput";
-    const loginButtonSelector = 'button[type="submit"]';
-
-    await $(emailSelector).setValue("");
-    await $(passwordSelector).setValue("");
-    await $(loginButtonSelector).click();
-    await homePage.waitForPageOpened();
+    await signInPage.fillCredentials(process.env.EMAIL as string, process.env.PASSWORD as string); // передай свои email и пароль
+    await signInPage.clickLoginButton();
+    await homePage.waitForPageOpened(); // предполагается, что homePage уже описан
   });
 
   // it.skip("Should create product with smoke data", async function () {
