@@ -1,4 +1,4 @@
-import { IProduct, MANUFACTURERS } from "../types/product.types";
+import { IProduct, MANUFACTURERS } from "../types/products.types.ts";
 
 export function generateProductData(customData?: Partial<IProduct>): IProduct {
   return {
