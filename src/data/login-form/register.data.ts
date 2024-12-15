@@ -37,7 +37,7 @@ export const INVALID_REGISTRATION_USERNAME_TEST_DATA: ILoginTestData[] = [
      dataDescription: "postfix space symbols in username"
    },
    {
-     username: 'test ',
+     username: '   ',
      password: 'testPassword',
      dataDescription: "only space symbols in username"
    },
