@@ -1,9 +1,8 @@
 import { INVALID_REGISTRATION_USERNAME_TEST_DATA, 
   INVALID_REGISTRATION_PASSWORD_TEST_DATA,
   POSSIBLE_FAILED_MESSAGES,
-  FIELD_LOCATORS } from '../../src/data/register.data.ts'
+  FIELD_LOCATORS } from "../../data/login-form/register.data";
 describe("[UI] Registration and login negative cases", () => {
-   
     beforeEach(async function () {
         await browser.maximizeWindow();
         await browser.url("https://anatoly-karpovich.github.io/demo-login-form/");
