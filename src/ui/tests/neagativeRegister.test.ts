@@ -1,7 +1,7 @@
 import { INVALID_REGISTRATION_USERNAME_TEST_DATA, 
   INVALID_REGISTRATION_PASSWORD_TEST_DATA,
   POSSIBLE_FAILED_MESSAGES,
-  FIELD_LOCATORS } from '../data/register.data.ts'
+  FIELD_LOCATORS } from '../../src/data/register.data.ts'
 describe("[UI] Registration and login negative cases", () => {
    
     beforeEach(async function () {
