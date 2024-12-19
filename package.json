@@ -11,5 +11,8 @@
   },
   "scripts": {
     "test": "npx wdio run ./wdio.conf.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
